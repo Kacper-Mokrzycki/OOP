@@ -1,6 +1,6 @@
 import java.util.concurrent.TimeUnit;
 
-interface Vechicle {
+interface Vehicle {
     public void startEngine();
     public void turnOffEngine();
     public void driveFaster();
@@ -21,7 +21,7 @@ class Engine{
 }
 
 
-class Car implements Vechicle{
+class Car implements Vehicle{
     public float gasPedalStatus = 0;
     public boolean engineStatus = false;
     @Override
@@ -63,7 +63,7 @@ class Car implements Vechicle{
         this.engine = engine;
         this.maxSpeed = maxSpeed;
     }
-    public String vechicleSpeed(){
+    public String vehicleSpeed(){
         return String.format("%d", maxSpeed);
     }
 }
@@ -91,6 +91,6 @@ public class Main {
         Brand brand = new Brand("BMW", 1916, 118000, "53000000000", "15000000000");
         Engine engine = new Engine(2000,250,500);
         Car vehicle = new Car(brand, engine, 250);
-        System.out.println(vehicle.vechicleSpeed());
+        System.out.println(vehicle.vehicleSpeed());
     }
 }
