@@ -6,7 +6,6 @@ public class Task_01 {
         int maximum = 0;
         int local_maximum = 0;
         for (int i = 0; i < 2300; i++) {
-//            System.out.println(new ReadFile().returnValueOfIndex(i));
             int tmp = new ReadFile().returnValueOfIndex(i);
             if (tmp != -1)
             {
